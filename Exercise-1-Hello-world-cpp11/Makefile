@@ -1,7 +1,7 @@
 # Build an executable named hello_world at ./bin/ from ./src/hello_world.cpp
 
 CXX := g++
-CXXFLAGS := -g -Wall
+CXXFLAGS := -g -Wall -Wextra
 FILENAME := hello_world
 
 INPUTFOLDER := ./src
