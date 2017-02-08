@@ -1,8 +1,6 @@
 #include <typeinfo>  // typeid
 #include <limits>  // numeric_limits
-#include <vector>
 #include <string>
-#include <algorithm>  // find
 
 #include <iostream>
 
@@ -49,7 +47,6 @@ int main()
     // Let's print information regarding different data types
     // This will be dependent on the function implementation and
     // the architecture involved.
-
     print_data_info<bool>();
     print_data_info<int>();
     print_data_info<long>();
