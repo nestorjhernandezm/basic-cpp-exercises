@@ -17,6 +17,7 @@ template<class T> void print_data_info()
     T max = numeric_limits<T>::max();
 
     // Force the type conversion in declaration in case of char-like types
+
     const bool is_char_type = (type_name == "c" || type_name == "h" ||
         type_name == "a");
 
@@ -28,6 +29,7 @@ template<class T> void print_data_info()
     else
     {
         // char values could also be interpreted as integers through ASCII
+
         int ascii_min = min;
         int ascii_max = max;
         cout << "Minimum value: " << ascii_min << endl;
@@ -44,9 +46,10 @@ template<class T> void print_data_info()
 
 int main()
 {
-    // Let's print information regarding different data types
-    // This will be dependent on the function implementation and
+    // Let's print information regarding different fundamental data types
+    // This will be dependent on the typeid.name() function implementation and
     // the architecture involved.
+
     print_data_info<bool>();
     print_data_info<int>();
     print_data_info<long>();
