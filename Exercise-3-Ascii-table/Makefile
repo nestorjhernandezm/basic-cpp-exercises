@@ -1,9 +1,8 @@
-# Build an executable named data_types_info at ./bin/ from
-# ./src/data_types_info.cpp
+# Build an executable named ascii_table at ./bin/ from ./src/ascii_table.cpp
 
 CXX := g++
 CXXFLAGS := -g -Wall -Wextra
-FILENAME := data_types_info
+FILENAME := ascii_table
 
 INPUTFOLDER := ./src
 INPUT := $(INPUTFOLDER)/$(FILENAME).cpp
