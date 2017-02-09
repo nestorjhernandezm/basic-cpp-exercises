@@ -1,19 +1,22 @@
-# Build an executable named pointer_basics at ./bin/ from
-# ./src/pointer_basics.cpp
+# Build a executable for each file in ./src with same name but without
+# the extension
 
 CXX := g++
 CXXFLAGS := -g -Wall -Wextra
-FILENAME := pointer_basics
+COMMAND := $(CXX) $(CXXFLAGS) -o
 
 INPUTFOLDER := ./src
-INPUT := $(INPUTFOLDER)/$(FILENAME).cpp
+SOURCES := $(wildcard $(INPUTFOLDER)/*.cpp)
 OUTPUTFOLDER := ./bin
-OUTPUT := $(OUTPUTFOLDER)/$(FILENAME)
 
 RM := rm -rf
 
+# Recursively-expanded variable for the foreach command
+
+PATHS = $(OUTPUTFOLDER)/$(basename $(notdir $(FILE))) $(FILE)
+
 all: $(OUTPUTFOLDER)
-	$(CXX) $(CXXFLAGS) -o $(OUTPUT) $(INPUT)
+	$(foreach FILE,$(SOURCES),$(COMMAND) $(PATHS);)
 
 $(OUTPUTFOLDER):
 	@mkdir -p $@
