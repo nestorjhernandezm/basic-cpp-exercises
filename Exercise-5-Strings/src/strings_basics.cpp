@@ -48,7 +48,7 @@ void test_remove_duplicates(string& s)
 
 int main()
 {
-    // 4.4) a) Revert the string "A string" using two methods: One based in
+    // 5.1) a) Revert the string "A string" using two methods: One based in
     // string class and another based in std::reverse from <algorithm>.
     // b) Remove duplicates in a string. Test your code with various cases.
 
@@ -68,8 +68,11 @@ int main()
     strings.push_back("aabbbcc");
     strings.push_back("abababa");
     strings.push_back("abcdefg");
+    strings.push_back("");
 
-    for (unsigned int i = 0; i < strings.size(); ++i)
+    unsigned int size = strings.size();
+
+    for (unsigned int i = 0; i < size; ++i)
     {
         test_remove_duplicates(strings[i]);
     }
