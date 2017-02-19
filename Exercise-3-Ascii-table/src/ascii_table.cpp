@@ -12,7 +12,7 @@ int main()
     cout << "Decimal\t\tHexadecimal\tCharacter" << endl;
     cout << "-------\t\t-----------\t---------" << endl;
 
-    for(int i = 33; i < 127; i++)
+    for(unsigned int i = 33; i < 127; i++)
     {
         cout << dec << i;
         cout << "\t\t0x" << hex << i;
