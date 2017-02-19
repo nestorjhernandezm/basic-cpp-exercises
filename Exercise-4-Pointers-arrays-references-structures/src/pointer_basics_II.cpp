@@ -15,7 +15,7 @@ int main()
     int max = 0;
     int* ptr_max = &max;
 
-    for (int i = 0; i < size; i++)
+    for (unsigned int i = 0; i < size; i++)
     {
         int value;
         cout << "Enter value " << i + 1 << " of the dataset" << endl;
