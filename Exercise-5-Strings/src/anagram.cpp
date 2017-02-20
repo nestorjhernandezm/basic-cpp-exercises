@@ -10,9 +10,9 @@ locale loc;
 
 void to_lowercase(string& s)
 {
-    int size = s.size();
+    unsigned int size = s.size();
 
-    for(int i = 0; i < size; ++i)
+    for(unsigned int i = 0; i < size; ++i)
     {
         s[i] = tolower(s[i], loc);
     }
@@ -35,7 +35,7 @@ bool is_anagram(string s1, string s2)
 
 int main()
 {
-    // 5.2) Verify if two words are anagrams. They are anagrams if their
+    // 5.2) Verify if two strings are anagrams. They are anagrams if their
     // ordered letters, excluding spaces, are the same.
 
     // Using string class

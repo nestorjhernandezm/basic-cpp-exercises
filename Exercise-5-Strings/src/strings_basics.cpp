@@ -23,9 +23,9 @@ void remove_duplicates(string& s)
 {
     unsigned int size = s.size();
 
-    for(unsigned i = 0; i < size; ++i)
+    for(unsigned int i = 0; i < size; ++i)
     {
-        for(unsigned j = i + 1; j < size; ++j)
+        for(unsigned int j = i + 1; j < size; ++j)
         {
             if(s[i] == s[j])
             {
