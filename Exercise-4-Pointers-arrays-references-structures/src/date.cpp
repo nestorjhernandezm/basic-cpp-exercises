@@ -4,6 +4,12 @@ using namespace std;
 
 struct Date
 {
+
+    Date();
+    Date(int, int, int);
+    void read_date();
+    void write_date();
+
     int day;
     int month;
     int year;
@@ -15,14 +21,42 @@ int main()
     // functions that reads a Date from input, writes a Date to output
     // and initializes a Date with a date.
 
-    Date today;
+    Date today = {12, 4, 2017};
+    today.write_date();
 
-    today.day = 12;
-    today.month = 4;
-    today.year = 2017;
+    Date halloween(31, 10, 2017);
+    halloween.write_date();
 
-    cout << "Today is: " << today.day << " " << today.month << " "
-        << today.year << endl;
+    Date christmas;
+    christmas.read_date();
+    christmas.write_date();
 
     return 0;
+}
+
+Date::Date()
+{
+
+}
+
+Date::Date(int dd, int mm, int yyyy)
+{
+    day = dd;
+    month = mm;
+    year = yyyy;
+}
+
+void Date::read_date()
+{
+    cout << "Introduce the day of the date (dd)" << endl;
+    cin >> day;
+    cout << "Introduce the day of the date (mm)" << endl;
+    cin >> month;
+    cout << "Introduce the day of the date (yyyy)" << endl;
+    cin >> year;
+}
+
+void Date::write_date()
+{
+    cout << "Date is: " << day << "/" << month << "/" << year << endl;
 }

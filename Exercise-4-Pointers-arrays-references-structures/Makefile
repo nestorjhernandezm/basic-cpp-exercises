@@ -2,7 +2,7 @@
 # the extension
 
 CXX := g++
-CXXFLAGS := -g -Wall -Wextra
+CXXFLAGS := -g -Wall -Wextra -std=c++11
 COMMAND := $(CXX) $(CXXFLAGS) -o
 
 INPUTFOLDER := ./src
