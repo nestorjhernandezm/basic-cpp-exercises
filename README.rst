@@ -1,7 +1,8 @@
-cpp-exercises
--------------
+basic-cpp-exercises
+-------------------
 
-A repository for storing solutions for exercises written in C++
+A repository for storing solutions for basic exercises written in C++.
+These were collected from basic tutorials.
 
 Build info
 ----------
